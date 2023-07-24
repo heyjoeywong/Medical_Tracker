@@ -1,19 +1,18 @@
 <template>
     <div class="calContainer">
-        <DatePicker expanded v-model="selectedDate" />
+        <ion-datetime presentation="date"></ion-datetime>
     </div>
 </template>
 
 <script setup lang="ts">
-import { Calendar, DatePicker } from 'v-calendar';
-import 'v-calendar/style.css';
-import { ref } from 'vue';
-
-const selectedDate = ref(new Date());
+import { IonDatetime } from '@ionic/vue';
 </script>
 
 <style scoped>
 .calContainer {
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

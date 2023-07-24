@@ -9,7 +9,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <AppCalendar/>
+      <AppCalendar />
       
     </ion-content>
   </ion-page>
