@@ -9,7 +9,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ExploreContainer name="Tab 2 page" />
+      <AppCalendar/>
       
     </ion-content>
   </ion-page>
@@ -17,6 +17,6 @@
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
 import AppHeader from '@/components/AppHeader.vue';
+import AppCalendar from '@/components/AppCalendar.vue';
 </script>

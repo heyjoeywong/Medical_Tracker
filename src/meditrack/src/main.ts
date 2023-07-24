@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
 
+import { setupCalendar } from 'v-calendar';
+
 import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
@@ -24,10 +26,15 @@ import '@ionic/vue/css/ionic.bundle.css'
 /* Theme variables */
 import './theme/variables.css';
 
+/* Calendar */
+import 'v-calendar/style.css';
+
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
-  
+
+app.use(setupCalendar, {})
+
 router.isReady().then(() => {
   app.mount('#app');
 });
