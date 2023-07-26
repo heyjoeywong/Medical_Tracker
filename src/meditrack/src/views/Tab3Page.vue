@@ -23,7 +23,7 @@
           <ion-item>
             <ion-textarea label="Description" v-model="formData.description" />
           </ion-item>
-          <ion-button @click="addNewSymptom">Add</ion-button>
+          <ion-button shape="round" @click="addNewSymptom">Add</ion-button>
         </ion-card-content>
       </ion-card>
 

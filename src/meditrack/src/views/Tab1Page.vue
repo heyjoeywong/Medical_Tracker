@@ -30,7 +30,7 @@
           <ion-item>
             <ion-textarea label="End Date" v-model="formData.eDate" />
           </ion-item>
-          <ion-button @click="addNewMedication">Add</ion-button>
+          <ion-button shape="round" @click="addNewMedication">Add</ion-button>
         </ion-card-content>
       </ion-card>
 
