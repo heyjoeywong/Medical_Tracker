@@ -1,20 +1,22 @@
 <template>
     <ion-card class="ion-margin ion-padding">
         <ion-card-header>
-            <ion-card-title>{{ }}</ion-card-title>
-            <ion-card-subtitle>Start Date: {{ }}</ion-card-subtitle>
+            <ion-card-title>{{ name }}</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
             <ion-list lines="none" class="medList ion-no-padding">
                 <ion-item>
-                    <ion-label>Quantity: {{ }}</ion-label>
+                    <ion-label>Start Date: {{ sDate }}</ion-label>
                 </ion-item>
                 <ion-item>
-                    <ion-label>Frequency: {{ }}</ion-label>
+                    <ion-label>Quantity: {{ quantity }}</ion-label>
                 </ion-item>
                 <ion-item>
-                    <ion-label>End Date: {{ }}</ion-label>
+                    <ion-label>Frequency: {{ frequency }}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>End Date: {{ eDate }}</ion-label>
                 </ion-item>
             </ion-list>
         </ion-card-content>
@@ -23,6 +25,8 @@
 
 <script setup lang="ts">
 import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonLabel } from '@ionic/vue';
+
+const props = defineProps(['name', 'sDate', 'quantity', 'frequency', 'eDate'])
 </script>
 
 <style scoped>

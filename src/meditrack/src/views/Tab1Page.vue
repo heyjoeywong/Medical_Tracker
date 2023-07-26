@@ -6,19 +6,90 @@
 
       <ion-title size="large" class="ion-padding-top">Medications</ion-title>
 
-      <MedCard medication="Ibuprofen" />
+      <MedCard name="Ibuprofen" sDate="26/7/2023" quantity="30" frequency="1 daily" eDate="26/8/2023" />
 
-      <AddButton />
+      <AddButton @click="showForm = !showForm" />
+
+      <ion-card v-if="showForm">
+        <ion-card-header>
+          <ion-card-title>Add New Medication</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input v-model="formData.name" />
+          </ion-item>
+          <ion-item>
+            <ion-label>Start Date</ion-label>
+            <ion-input v-model="formData.sDate" />
+          </ion-item>
+          <ion-item>
+            <ion-label>Quantity</ion-label>
+            <ion-textarea v-model="formData.quantity" />
+          </ion-item>
+          <ion-item>
+            <ion-label>Frequency</ion-label>
+            <ion-textarea v-model="formData.frequency" />
+          </ion-item>
+          <ion-item>
+            <ion-label>End Date</ion-label>
+            <ion-textarea v-model="formData.eDate" />
+          </ion-item>
+          <ion-button @click="addNewMedication">Add</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <MedCard v-for="(medication, index) in medicationList" :key="index" :name="medication.name"
+        :sDate="medication.sDate" :quantity="medication.quantity" :frequency="medication.frequency"
+        :eDate="medication.eDate" />
 
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonItem, IonLabel, IonInput, IonTextarea, IonButton } from '@ionic/vue';
+import { ref, reactive, computed } from 'vue';
+import { useStore } from 'vuex';
 import AppHeader from '@/components/AppHeader.vue';
 import MedCard from '@/components/MedCard.vue';
 import AddButton from '@/components/AddButton.vue';
+
+const showForm = ref(false);
+const formData = reactive({
+  name: '',
+  sDate: '',
+  quantity: '',
+  frequency: '',
+  eDate: '',
+});
+
+const store = useStore();
+
+const medicationList = computed(() => store.state.medications);
+
+const addNewMedication = () => {
+  if (formData.name && formData.sDate && formData.quantity && formData.frequency && formData.eDate) {
+    const newMedication = {
+      name: formData.name,
+      sDate: formData.sDate,
+      quantity: formData.quantity,
+      frequency: formData.frequency,
+      eDate: formData.eDate,
+    };
+
+    store.commit('addMedication', newMedication);
+
+    formData.name = '';
+    formData.sDate = '';
+    formData.quantity = '';
+    formData.frequency = '';
+    formData.eDate = '';
+
+    // Close the form after submitting
+    showForm.value = false;
+  }
+};
 </script>
 
 <style scoped></style>
