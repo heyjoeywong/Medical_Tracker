@@ -15,16 +15,13 @@
         </ion-card-header>
         <ion-card-content>
           <ion-item>
-            <ion-label>Date</ion-label>
-            <ion-input v-model="formData.date" />
+            <ion-input label="Date" v-model="formData.date" />
           </ion-item>
           <ion-item>
-            <ion-label>Title</ion-label>
-            <ion-input v-model="formData.title" />
+            <ion-input label="Title" v-model="formData.title" />
           </ion-item>
           <ion-item>
-            <ion-label>Description</ion-label>
-            <ion-textarea v-model="formData.description" />
+            <ion-textarea label="Description" v-model="formData.description" />
           </ion-item>
           <ion-button @click="addNewSymptom">Add</ion-button>
         </ion-card-content>
@@ -38,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonTitle, IonContent, IonButton, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonItem, IonLabel, IonInput, IonTextarea } from '@ionic/vue';
+import { IonPage, IonTitle, IonContent, IonButton, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonItem, IonInput, IonTextarea } from '@ionic/vue';
 import { ref, reactive, computed } from 'vue';
 import { useStore } from 'vuex';
 import AppHeader from '@/components/AppHeader.vue';

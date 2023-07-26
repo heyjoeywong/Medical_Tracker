@@ -16,24 +16,19 @@
         </ion-card-header>
         <ion-card-content>
           <ion-item>
-            <ion-label>Name</ion-label>
-            <ion-input v-model="formData.name" />
+            <ion-input label="Name" v-model="formData.name" />
           </ion-item>
           <ion-item>
-            <ion-label>Start Date</ion-label>
-            <ion-input v-model="formData.sDate" />
+            <ion-input label="Start Date" v-model="formData.sDate" />
           </ion-item>
           <ion-item>
-            <ion-label>Quantity</ion-label>
-            <ion-textarea v-model="formData.quantity" />
+            <ion-textarea label="Quantity" v-model="formData.quantity" />
           </ion-item>
           <ion-item>
-            <ion-label>Frequency</ion-label>
-            <ion-textarea v-model="formData.frequency" />
+            <ion-textarea label="Frequency" v-model="formData.frequency" />
           </ion-item>
           <ion-item>
-            <ion-label>End Date</ion-label>
-            <ion-textarea v-model="formData.eDate" />
+            <ion-textarea label="End Date" v-model="formData.eDate" />
           </ion-item>
           <ion-button @click="addNewMedication">Add</ion-button>
         </ion-card-content>
@@ -48,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonItem, IonLabel, IonInput, IonTextarea, IonButton } from '@ionic/vue';
+import { IonPage, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonItem, IonInput, IonTextarea, IonButton } from '@ionic/vue';
 import { ref, reactive, computed } from 'vue';
 import { useStore } from 'vuex';
 import AppHeader from '@/components/AppHeader.vue';
