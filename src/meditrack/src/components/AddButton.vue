@@ -20,5 +20,4 @@ import { addOutline } from 'ionicons/icons';
     bottom: 12px;
     z-index: 99;
 }
-
 </style>
