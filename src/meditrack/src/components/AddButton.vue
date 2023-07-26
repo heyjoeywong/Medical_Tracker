@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="fixed">
         <ion-fab slot="fixed" vertical="bottom" horizontal="center" class="fabMargin">
             <ion-fab-button>
                 <ion-icon :icon="addOutline" aria-label="Add"></ion-icon>
@@ -14,7 +14,11 @@ import { addOutline } from 'ionicons/icons';
 </script>
 
 <style scoped>
-.fabMargin {
-    margin-bottom: 60px;
+.fixed {
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    z-index: 99;
 }
+
 </style>
