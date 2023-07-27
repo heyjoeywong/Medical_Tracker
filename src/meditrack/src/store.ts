@@ -14,14 +14,21 @@ interface Medication {
   eDate: string,
 }
 
+interface Mood {
+  date: string;
+  mood: number;
+}
+
 interface State {
   symptoms: Symptom[];
   medications: Medication[];
+  moods: Mood[],
 }
 
 const state: State = {
   symptoms: [],
   medications: [],
+  moods: [],
 };
 
 const mutations = {
@@ -30,6 +37,14 @@ const mutations = {
   },
   addMedication(state: State, medication: Medication) {
     state.medications.push(medication)
+  },
+  addOrUpdateMood(state: State, mood: Mood) {
+    const existingMood = state.moods.find((m) => m.date === mood.date);
+    if (existingMood) {
+      existingMood.mood = mood.mood;
+    } else {
+      state.moods.push(mood);
+    }
   },
 };
 
