@@ -1,5 +1,5 @@
 <template>
-    <ion-fab slot="fixed" vertical="bottom" horizontal="end" class="ion-margin ion-padding">
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end" class="ion-margin">
         <ion-fab-button>
             <ion-icon :icon="addOutline" aria-label="Add"></ion-icon>
         </ion-fab-button>

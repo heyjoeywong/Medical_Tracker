@@ -6,7 +6,7 @@
 
       <ion-title size="large" class="ion-padding-top">Medications</ion-title>
 
-      <MedCard name="Ibuprofen" sDate="26/7/2023" quantity="30" frequency="1 daily" eDate="26/8/2023" />
+      <MedCard name="Ibuprofen" sDate="26/7/2023" quantity="30" frequency="1 daily or when necessary" eDate="26/8/2023" />
 
       <AddButton @click="showForm = !showForm" />
 

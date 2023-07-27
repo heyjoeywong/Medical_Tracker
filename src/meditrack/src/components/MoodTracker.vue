@@ -1,11 +1,11 @@
 <template>
     <ion-content>
-        <ion-title>Hi, how are you feeling today?</ion-title>
+        <ion-title class="ion-padding-bottom">Hi, how are you feeling today?</ion-title>
 
         <ion-card class="ion-margin">
             <form @submit.prevent="logMood">
                 <ion-grid class="ion-padding" :fixed="true">
-                    <ion-row>
+                    <ion-row class="ion-justify-content-center">
                         <ion-radio-group v-model="selectedMood">
                             <ion-col><ion-radio value="1">1</ion-radio></ion-col>
                             <ion-col><ion-radio value="2">2</ion-radio></ion-col>
