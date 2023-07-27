@@ -14,7 +14,7 @@
         :sDate="medication.sDate" :quantity="medication.quantity" :frequency="medication.frequency"
         :eDate="medication.eDate" />
 
-      <ion-card v-if="showForm">
+      <ion-card class="ion-margin" v-if="showForm">
         <ion-card-header>
           <ion-card-title>Add New Medication</ion-card-title>
         </ion-card-header>
@@ -34,7 +34,9 @@
           <ion-item>
             <ion-textarea label="End Date" v-model="formData.eDate" />
           </ion-item>
-          <ion-button shape="round" @click="addNewMedication">Add</ion-button>
+          <div class="ion-text-center ion-padding-top">
+            <ion-button slot="end" shape="round" @click="addNewMedication">Add</ion-button>
+          </div>
         </ion-card-content>
       </ion-card>
 
@@ -43,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonItem, IonInput, IonTextarea, IonButton } from '@ionic/vue';
+import { IonPage, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonItem, IonInput, IonTextarea, IonToolbar, IonButton } from '@ionic/vue';
 import { ref, reactive, computed } from 'vue';
 import { useStore } from 'vuex';
 import AppHeader from '@/components/AppHeader.vue';

@@ -1,5 +1,5 @@
 <template>
-    <div class="calContainer">
+    <div class="cal-container">
         <ion-datetime presentation="date" @ionChange="dateChanged"></ion-datetime>
     </div>
 </template>
@@ -19,8 +19,8 @@ const dateChanged = (event: any) => {
 </script>
 
 <style scoped>
-.calContainer {
-    margin: 20px;
+.cal-container {
+    margin: 16px;
     display: flex;
     justify-content: center;
     align-items: center;

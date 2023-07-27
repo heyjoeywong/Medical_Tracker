@@ -1,5 +1,5 @@
 <template>
-    <ion-card>
+    <ion-card class="ion-margin">
         <ion-card-header>
             Mood History
         </ion-card-header>

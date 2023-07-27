@@ -5,7 +5,7 @@
         </ion-card-header>
 
         <ion-card-content>
-            <ion-list lines="none" class="medList ion-no-padding">
+            <ion-list lines="none" class="med-list ion-no-padding">
                 <ion-item>
                     <ion-label>Start Date: {{ sDate }}</ion-label>
                 </ion-item>
@@ -24,13 +24,13 @@
 </template>
 
 <script setup lang="ts">
-import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonLabel } from '@ionic/vue';
+import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonList, IonItem, IonLabel } from '@ionic/vue';
 
 const props = defineProps(['name', 'sDate', 'quantity', 'frequency', 'eDate'])
 </script>
 
 <style scoped>
-.medList {
+.med-list {
     margin-left: -16px;
 }
 </style>

@@ -12,7 +12,7 @@
       <SymCard v-for="(symptom, index) in symptomList" :key="index" :date="symptom.date" :title="symptom.title"
         :description="symptom.description" />
 
-      <ion-card v-if="showForm">
+      <ion-card class="ion-margin" v-if="showForm">
         <ion-card-header>
           <ion-card-title>Add New Symptom</ion-card-title>
         </ion-card-header>
@@ -26,7 +26,9 @@
           <ion-item>
             <ion-textarea label="Description" v-model="formData.description" />
           </ion-item>
-          <ion-button shape="round" @click="addNewSymptom">Add</ion-button>
+          <div class="ion-text-center ion-padding-top">
+            <ion-button slot="end" shape="round" @click="addNewSymptom">Add</ion-button>
+          </div>
         </ion-card-content>
       </ion-card>
 
@@ -35,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonTitle, IonContent, IonButton, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonItem, IonInput, IonTextarea } from '@ionic/vue';
+import { IonPage, IonTitle, IonContent, IonToolbar, IonButton, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonItem, IonInput, IonTextarea } from '@ionic/vue';
 import { ref, reactive, computed } from 'vue';
 import { useStore } from 'vuex';
 import AppHeader from '@/components/AppHeader.vue';

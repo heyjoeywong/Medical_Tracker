@@ -2,10 +2,10 @@
     <ion-content>
         <ion-title>Hi, how are you feeling today?</ion-title>
 
-        <ion-card>
+        <ion-card class="ion-margin">
             <form @submit.prevent="logMood">
                 <ion-grid class="ion-padding" :fixed="true">
-                    <ion-row class="ion-text-center">
+                    <ion-row>
                         <ion-radio-group v-model="selectedMood">
                             <ion-col><ion-radio value="1">1</ion-radio></ion-col>
                             <ion-col><ion-radio value="2">2</ion-radio></ion-col>
@@ -13,7 +13,9 @@
                         </ion-radio-group>
                     </ion-row>
                 </ion-grid>
-                <ion-button shape="round" type="submit">Log Mood</ion-button>
+                <div class="ion-text-center ion-padding-bottom">
+                    <ion-button shape="round" type="submit">Log Mood</ion-button>
+                </div>
             </form>
         </ion-card>
 
