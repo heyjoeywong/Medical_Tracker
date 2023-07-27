@@ -26,6 +26,4 @@ const selectedDate = ref('');
 const updateSelectedDate = (date: string) => {
   selectedDate.value = date;
 };
-
-console.log('success');
 </script>
