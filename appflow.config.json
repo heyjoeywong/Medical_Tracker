@@ -8,6 +8,6 @@
             "webBuildCommand": "ionic serve",
             "iosPath": "",
             "androidPath": ""
-        },
+        }
     ]
 }
