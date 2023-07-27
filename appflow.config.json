@@ -1,0 +1,14 @@
+{
+    "apps":
+    [
+        {
+            "appId": "44d64e04",
+            "root": "src/meditrack",
+            "dependencyInstallCommand": "cd ../../ && npm install",
+            "webBuildCommand": "ionic serve",
+            "iosPath": "",
+            "androidPath": "",
+        },
+        ...
+    ]
+}
