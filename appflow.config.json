@@ -7,7 +7,7 @@
             "dependencyInstallCommand": "cd ../../ && npm install",
             "webBuildCommand": "ionic serve",
             "iosPath": "",
-            "androidPath": "",
+            "androidPath": ""
         },
     ]
 }
