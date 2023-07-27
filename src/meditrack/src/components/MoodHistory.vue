@@ -1,5 +1,5 @@
 <template>
-    <ion-card class="ion-margin">
+    <ion-card class="ion-margin round-border">
         <ion-card-header>
             Mood History
         </ion-card-header>
@@ -25,4 +25,8 @@ const store = useStore();
 const moodHistory = store.state.moods;
 </script>
 
-<style scoped></style>
+<style scoped>
+.round-border {
+    border-radius: 20px;
+}
+</style>

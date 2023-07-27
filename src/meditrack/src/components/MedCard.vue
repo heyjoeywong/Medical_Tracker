@@ -1,5 +1,5 @@
 <template>
-    <ion-card class="ion-margin ion-padding">
+    <ion-card class="ion-margin ion-padding round-border">
         <ion-card-header>
             <ion-card-title>{{ name }}</ion-card-title>
         </ion-card-header>
@@ -32,5 +32,9 @@ const props = defineProps(['name', 'sDate', 'quantity', 'frequency', 'eDate'])
 <style scoped>
 .med-list {
     margin-left: -16px;
+}
+
+.round-border {
+    border-radius: 20px;
 }
 </style>

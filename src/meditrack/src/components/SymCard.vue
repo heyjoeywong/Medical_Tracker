@@ -1,5 +1,5 @@
 <template>
-    <ion-card class="ion-margin ion-padding">
+    <ion-card class="ion-margin ion-padding round-border">
         <ion-card-header>
             <ion-card-title>{{ date }}</ion-card-title>
             <ion-card-subtitle>{{ title }}</ion-card-subtitle>
@@ -14,3 +14,9 @@ import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent }
 
 const props = defineProps(['date', 'title', 'description']);
 </script>
+
+<style scoped>
+.round-border {
+    border-radius: 20px;
+}
+</style>

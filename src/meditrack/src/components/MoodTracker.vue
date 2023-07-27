@@ -2,7 +2,7 @@
     <ion-content>
         <ion-title class="ion-padding-bottom">Hi, how are you feeling today?</ion-title>
 
-        <ion-card class="ion-margin">
+        <ion-card class="ion-margin round-border">
             <form @submit.prevent="logMood">
                 <ion-grid class="ion-padding" :fixed="true">
                     <ion-row class="ion-justify-content-center">
@@ -42,4 +42,8 @@ const logMood = () => {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.round-border {
+    border-radius: 20px;
+}
+</style>
