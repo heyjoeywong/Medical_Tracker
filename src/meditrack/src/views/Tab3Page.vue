@@ -9,6 +9,9 @@
 
       <AddButton @click="showForm = !showForm" />
 
+      <SymCard v-for="(symptom, index) in symptomList" :key="index" :date="symptom.date" :title="symptom.title"
+        :description="symptom.description" />
+
       <ion-card v-if="showForm">
         <ion-card-header>
           <ion-card-title>Add New Symptom</ion-card-title>
@@ -26,9 +29,6 @@
           <ion-button shape="round" @click="addNewSymptom">Add</ion-button>
         </ion-card-content>
       </ion-card>
-
-      <SymCard v-for="(symptom, index) in symptomList" :key="index" :date="symptom.date" :title="symptom.title"
-        :description="symptom.description" />
 
     </ion-content>
   </ion-page>

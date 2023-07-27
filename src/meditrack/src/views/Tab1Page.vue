@@ -10,6 +10,10 @@
 
       <AddButton @click="showForm = !showForm" />
 
+      <MedCard v-for="(medication, index) in medicationList" :key="index" :name="medication.name"
+        :sDate="medication.sDate" :quantity="medication.quantity" :frequency="medication.frequency"
+        :eDate="medication.eDate" />
+
       <ion-card v-if="showForm">
         <ion-card-header>
           <ion-card-title>Add New Medication</ion-card-title>
@@ -33,10 +37,6 @@
           <ion-button shape="round" @click="addNewMedication">Add</ion-button>
         </ion-card-content>
       </ion-card>
-
-      <MedCard v-for="(medication, index) in medicationList" :key="index" :name="medication.name"
-        :sDate="medication.sDate" :quantity="medication.quantity" :frequency="medication.frequency"
-        :eDate="medication.eDate" />
 
     </ion-content>
   </ion-page>
