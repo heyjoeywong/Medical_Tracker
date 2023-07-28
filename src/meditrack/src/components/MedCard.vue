@@ -13,7 +13,7 @@
                     <ion-label>Quantity: {{ quantity }}</ion-label>
                 </ion-item>
                 <ion-item>
-                    <ion-label>Frequency: {{ frequency }}</ion-label>
+                    <ion-label class="ion-text-wrap">Frequency: {{ frequency }}</ion-label>
                 </ion-item>
                 <ion-item>
                     <ion-label>End Date: {{ eDate }}</ion-label>
