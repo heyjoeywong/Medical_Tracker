@@ -5,7 +5,7 @@
     <ion-content :fullscreen="true">
       <ion-title size="large" class="ion-padding-top">Symptoms</ion-title>
 
-      <SymCard date="26/07/2023" title="Test" description="I am experiencing some pain." />
+      <SymCard date="26/07/2023" title="Pain in Shoulder" description="I am experiencing some pain in my shoulder area." />
 
       <AddButton @click="showForm = !showForm" />
 
