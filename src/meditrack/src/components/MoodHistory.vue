@@ -5,7 +5,7 @@
         </ion-card-header>
 
         <ion-card-content>
-            <ion-list>
+            <ion-list class="mood-list">
                 <ion-item v-for="mood in moodHistory" :key="mood.date">
                     <ion-label>{{ mood.date }}
                         <p> Mood: {{ mood.mood }}</p>
@@ -28,5 +28,9 @@ const moodHistory = store.state.moods;
 <style scoped>
 .round-border {
     border-radius: 20px;
+}
+
+.mood-list {
+    margin-left: -16px;
 }
 </style>
