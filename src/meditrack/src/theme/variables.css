@@ -74,6 +74,9 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-light-contrast-rgb: 0,0,0;
 	--ion-color-light-shade: #b4b4b4;
 	--ion-color-light-tint: #d1d1d1;
+
+  /** font **/
+  --ion-font-family: 'Verdana';
 }
 
 @media (prefers-color-scheme: dark) {
