@@ -19,13 +19,13 @@
         </ion-card-header>
         <ion-card-content>
           <ion-item>
-            <ion-input label="Date" v-model="formData.date" placeholder="DD/MM/YYYY" />
+            <ion-input color="tertiary" label="Date" v-model="formData.date" placeholder="DD/MM/YYYY" />
           </ion-item>
           <ion-item>
-            <ion-input label="Title" v-model="formData.title" placeholder="Symptom" />
+            <ion-input color="tertiary" label="Title" v-model="formData.title" placeholder="Symptom" />
           </ion-item>
           <ion-item>
-            <ion-textarea label="Description" v-model="formData.description" placeholder="Description" />
+            <ion-textarea color="tertiary" label="Description" v-model="formData.description" placeholder="Description" />
           </ion-item>
           <div class="ion-text-center ion-padding-top">
             <ion-button slot="end" shape="round" @click="addNewSymptom">Add</ion-button>
