@@ -12,7 +12,7 @@
       <SymCard v-for="(symptom, index) in symptomList" :key="index" :date="symptom.date" :title="symptom.title"
         :description="symptom.description" />
 
-      <ion-card class="ion-margin" v-if="showForm">
+      <ion-card class="ion-margin round-border" v-if="showForm">
         <ion-card-header>
           <ion-card-title>Add New Symptom</ion-card-title>
         </ion-card-header>
@@ -81,3 +81,9 @@ const addNewSymptom = () => {
   }
 };
 </script>
+
+<style scoped>
+.round-border {
+    border-radius: 20px;
+}
+</style>

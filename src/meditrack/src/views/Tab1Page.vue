@@ -14,7 +14,7 @@
         :sDate="medication.sDate" :quantity="medication.quantity" :frequency="medication.frequency"
         :eDate="medication.eDate" />
 
-      <ion-card class="ion-margin" v-if="showForm">
+      <ion-card class="ion-margin round-border" v-if="showForm">
         <ion-card-header>
           <ion-card-title>Add New Medication</ion-card-title>
         </ion-card-header>
@@ -89,4 +89,8 @@ const addNewMedication = () => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.round-border {
+    border-radius: 20px;
+}
+</style>
