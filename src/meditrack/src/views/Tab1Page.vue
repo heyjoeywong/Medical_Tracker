@@ -20,19 +20,19 @@
         </ion-card-header>
         <ion-card-content>
           <ion-item>
-            <ion-input label="Name" v-model="formData.name" />
+            <ion-input label="Name" v-model="formData.name" placeholder="Medication Name" />
           </ion-item>
           <ion-item>
-            <ion-input label="Start Date" v-model="formData.sDate" />
+            <ion-input label="Start Date" v-model="formData.sDate" placeholder="DD/MM/YYYY" />
           </ion-item>
           <ion-item>
-            <ion-textarea label="Quantity" v-model="formData.quantity" />
+            <ion-textarea label="Quantity" v-model="formData.quantity" placeholder="Amount" />
           </ion-item>
           <ion-item>
-            <ion-textarea label="Frequency" v-model="formData.frequency" />
+            <ion-textarea label="Frequency" v-model="formData.frequency" placeholder="Instructions" />
           </ion-item>
           <ion-item>
-            <ion-textarea label="End Date" v-model="formData.eDate" />
+            <ion-textarea label="End Date" v-model="formData.eDate" placeholder="DD/MM/YYYY" />
           </ion-item>
           <div class="ion-text-center ion-padding-top">
             <ion-button slot="end" shape="round" @click="addNewMedication">Add</ion-button>
@@ -91,6 +91,6 @@ const addNewMedication = () => {
 
 <style scoped>
 .round-border {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 </style>
